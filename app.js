@@ -1,4 +1,4 @@
-App({
+  App({
   onLaunch: function () {
           wx.getUserInfo({
             success: res => {
@@ -39,6 +39,6 @@ App({
   globalData: {
     userInfo: null,
     sessionId:'',
-    host:,
+    host:127.0.0.1:8000,
   }
 })
