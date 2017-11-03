@@ -1,1 +1,50 @@
 /* pages/user/user.wxss */
+page{
+	border-top: 1px solid #ebebeb;
+	background: #ebebeb;
+}
+.user_star{
+	width: 100%;
+	height: 155px;
+	background: #fff;
+}
+.user_star image{
+	display: block;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	margin: 0 auto;
+	position: relative;
+	top: 20px;
+	border: 1px solid #ebebeb;
+}
+.user_star .user_name{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	top: 35px;
+	font-size: 17px;
+}
+.list_box{
+	width: 100%;
+	height: 45px;
+	background: #fff;
+	margin-top: 15px;
+}
+.list_box .list{
+	width: 95%;
+	height: 45px;
+	float: right;
+	display: flex;
+	border-bottom: 1px solid #ebebeb;
+	align-items: center;
+}
+.list_box .list image{
+	width: 25px;
+	height: 25px;
+	margin-right: 5px;
+}
+.list_box .list .list_title{
+	font-size: 15px;
+	flex: 1;
+}

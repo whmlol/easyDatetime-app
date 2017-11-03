@@ -1,2 +1,20 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="user_star">
+	<image wx:if="{{ avatar }}" src="{{ avatar }}"></image>
+	<view class="user_name">{{ name }}</view>
+</view>
+<navigator url="/pages/launch/launch" hover-class="none">
+	<view class="list_box">
+		<view class="list">
+			<view class="list_title">我发起的会议</view>
+			<image src="http://ovw2uynf4.bkt.clouddn.com/next.png"></image>
+		</view>
+	</view>
+</navigator>
+<navigator url="/pages/join/join" hover-class="none">
+	<view class="list_box">
+		<view class="list">
+			<view class="list_title">我参加的会议</view>
+			<image src="http://ovw2uynf4.bkt.clouddn.com/next.png"></image>
+		</view>
+	</view>
+</navigator>

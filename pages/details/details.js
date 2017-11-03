@@ -1,22 +1,18 @@
-// pages/user/user.js
-var app = getApp();
+// pages/details/details.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    avatar: '',
-    name: ''
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      avatar: app.globalData.userInfo.avatarUrl,
-      name: app.globalData.userInfo.nickName
-    })
+  
   },
 
   /**
@@ -29,8 +25,8 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
-
+  onShow: function () {
+  
   },
 
   /**
