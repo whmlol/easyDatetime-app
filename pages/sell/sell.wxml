@@ -1,0 +1,24 @@
+<import src="../../zanui-weapp/dist/field/index.wxml" />
+
+  <view class="zan-panel">
+    <template is="zan-field" data="{{ title: '收货人', type: 'input', placeholder: '名字', value: value }}"></template>
+    <template is="zan-field" data="{{ title: '联系电话', type: 'input', inputType: 'number', placeholder: '请输入手机号', error: true }}"></template>
+    <template is="zan-field" data="{{ title: '详细地址', type: 'textarea', placeholder: '请输入详细地址' }}"></template>
+    <view class="zan-cell zan-field">
+      <view class="zan-cell__hd zan-field__title">选择区域</view>
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+          <picker-view-column>
+            <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+          </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+<view class="zan-btns">
+    <button class="zan-btn zan-btn--primary" bindtap="clearInput">清除输入</button>
+  </view>
