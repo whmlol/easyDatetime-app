@@ -26,7 +26,8 @@
 				{
 					"id": -1,
 					"name": "sell",
-					"pathName": "pages/sell/sell"
+					"pathName": "pages/sell/sell",
+					"query": ""
 				}
 			]
 		}

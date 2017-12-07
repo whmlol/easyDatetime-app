@@ -1,4 +1,4 @@
-// pages/rank/rank.js
+// pages/details/details.js
 Page({
 
   /**
