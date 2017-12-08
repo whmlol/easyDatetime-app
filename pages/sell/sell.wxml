@@ -1,38 +1,37 @@
 <import src="../../zanui-weapp/dist/field/index.wxml" />
 <import src="../../zanui-weapp/dist/toptips/index.wxml" />
-
-  <view class="zan-panel">
+<view class="zan-panel">
     <template is="zan-toptips" data="{{ zanTopTips }}"></template>
     <template is="zan-field" data="{{ title: '收货人', type: 'input', placeholder: '名字', value: value }}"></template>
     <template is="zan-field" data="{{ title: '联系电话', type: 'input', inputType: 'number', placeholder: '请输入手机号', error: true }}"></template>
     <template is="zan-field" data="{{ title: '详细地址', type: 'textarea', placeholder: '请输入详细地址' }}"></template>
     <view class="zan-cell zan-field">
-      <view class="zan-cell__hd zan-field__title">选择区域</view>
-      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-        <view class="picker">
-          {{region[0]}}，{{region[1]}}，{{region[2]}}
-        </view>
-      </picker>
+        <view class="zan-cell__hd zan-field__title">选择区域</view>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker">
+                {{region[0]}}，{{region[1]}}，{{region[2]}}
+            </view>
+        </picker>
     </view>
-  </view>
+</view>
 <view class="zan-btns">
     <button class="zan-btn zan-btn--primary" bindtap="clearInput">确定</button>
-  </view>
-  <view class="weui-cell">
-      <view class="weui-cell__bd">
-          <view class="weui-uploader">
-              <view class="weui-uploader__hd">
-                  <text class="weui-uploader__title">图片上传</text>
-                  <view class="weui-uploader__info">{{tempFilePaths.length}}/{{imageCountMax}}</view>
-              </view>
-              <view class="weui-uploader__bd">
+</view>
+<view class="weui-cell">
+    <view class="weui-cell__bd">
+        <view class="weui-uploader">
+            <view class="weui-uploader__hd">
+                <text class="weui-uploader__title">图片上传</text>
+                <view class="weui-uploader__info">{{tempFilePaths.length}}/{{imageCountMax}}</view>
+            </view>
+            <view class="weui-uploader__bd">
                 <block wx:for="{{ tempFilePaths }}">
-                  <image class="preview_image" src="{{item}}" mode="aspectFill" bindtap="previewImage" data-index="{{index}}"></image>
+                    <image class="preview_image" src="{{item}}" mode="aspectFill" bindtap="previewImage" data-index="{{index}}" bindlongpress="longPress"></image>
                 </block>
                 <view class="weui-uploader__input-box" wx:if="{{tempFilePaths.length < imageCountMax}}">
                     <text class="weui-uploader__input" bindtap="chooseImage"></text>
                 </view>
-              </view>
-          </view>
-      </view>
-  </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,28 +1,26 @@
-<view class="photo_wall" >
-  <scroll-view scroll-x = "true" class = "tab-h" scroll-left="{{scrollLeft}}">
-        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">推荐</view>
+<view class="photo_wall">
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">推荐</view>
         <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">男神</view>
         <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">女神</view>
-  </scroll-view>
-   <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
-     style="height:{{winHeight}}rpx">
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
         <swiper-item wx:for="{{[0,1,2]}}">
-            <scroll-view scroll-y="true" class="scoll-h" >
-              <view class="photo_wall_view">
-                <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
-                    <view class="photo_wall_view_item">
-                      <navigator url="/pages/details/details?id={{ item.id }}" class="navigator" hover-class="none">
-                        <view class="image_view">
-                          <image class="image" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg"></image>
+            <scroll-view scroll-y="true" class="scoll-h">
+                <view class="photo_wall_view">
+                    <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
+                        <view class="photo_wall_view_item">
+                            <navigator url="/pages/details/details?id={{ item.id }}" class="navigator" hover-class="none">
+                                <view class="image_view">
+                                    <image class="image" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg"></image>
+                                </view>
+                                <view class="text_view">
+                                    <text class="text_name">nishishei</text>
+                                    <text class="text_age">24|180cm</text>
+                                </view>
+                            </navigator>
                         </view>
-                        <view class="text_view">
-                          <text class="text_name">nishishei</text>
-                          <text class="text_age">24|180cm</text>
-                        </view>
-                      </navigator>
-                    </view>
-                    
-                </block>
+                    </block>
                 </view>
             </scroll-view>
         </swiper-item>
