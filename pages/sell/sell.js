@@ -52,7 +52,23 @@ Page(Object.assign({}, Toptips, {
     },
 
     longPress:function(e){
-        this.showZanTopTips('long press')
+        let index = e.target.dataset.index
+        let currentIndex = parseInt(index) + 1
+        wx.showModal({
+            title:'删除',
+            content:'确定删除第张'+currentIndex+'照片吗',
+            success: res =>{
+                if (res.confirm) {
+                    let tempFilePaths = this.data.tempFilePaths
+                    tempFilePaths.splice(index,1)
+                    this.setData({
+                        tempFilePaths:tempFilePaths
+                    })
+                }else if (res.cancel) {
+
+                }
+            }
+        })
     },
     /**
      * 生命周期函数--监听页面加载

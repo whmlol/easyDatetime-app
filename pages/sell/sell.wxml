@@ -14,9 +14,6 @@
         </picker>
     </view>
 </view>
-<view class="zan-btns">
-    <button class="zan-btn zan-btn--primary" bindtap="clearInput">确定</button>
-</view>
 <view class="weui-cell">
     <view class="weui-cell__bd">
         <view class="weui-uploader">
@@ -34,4 +31,7 @@
             </view>
         </view>
     </view>
+</view>
+<view class="zan-btns">
+    <button class="zan-btn zan-btn--primary" bindtap="clearInput">确定</button>
 </view>
