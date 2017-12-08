@@ -2,12 +2,15 @@
 <import src="../../zanui-weapp/dist/toptips/index.wxml" />
 <view class="zan-panel">
     <template is="zan-toptips" data="{{ zanTopTips }}"></template>
-    <template is="zan-field" data="{{ title: '收货人', type: 'input', placeholder: '名字', value: value }}"></template>
-    <template is="zan-field" data="{{ title: '联系电话', type: 'input', inputType: 'number', placeholder: '请输入手机号', error: true }}"></template>
-    <template is="zan-field" data="{{ title: '详细地址', type: 'textarea', placeholder: '请输入详细地址' }}"></template>
+    <template is="zan-field" data="{{ title: '姓名', type: 'input', placeholder: '请输入被卖人姓名',componentId:'name'}}"></template>
+    <template is="zan-field" data="{{ title: '年龄', type: 'input', inputType: 'number', placeholder: '请输入被卖人年龄', componentId:'age' }}"></template>
+    <template is="zan-field" data="{{ title: '微信号', type: 'input', placeholder: '请输入被卖人微信号',componentId:'wechatNumber'}}"></template>
+    <template is="zan-field" data="{{ title: '身高(Cm)', type: 'input', inputType: 'number', placeholder: '请输入被卖人身高', componentId:'height' }}"></template>
+    <template is="zan-field" data="{{ title: '体重(Kg)', type: 'input', inputType: 'number', placeholder: '请输入被卖人体重', componentId:'weight' }}"></template>
+    <template is="zan-field" data="{{ title: '详细介绍', type: 'textarea', placeholder: '补充说明,个人爱好,对理想的他或她的描述', componentId:'signature' }}"></template>
     <view class="zan-cell zan-field">
         <view class="zan-cell__hd zan-field__title">选择区域</view>
-        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" class="zan-field__input zan-cell__bd">
             <view class="picker">
                 {{region[0]}}，{{region[1]}}，{{region[2]}}
             </view>

@@ -1,11 +1,18 @@
 // pages/details/details.js
 const Toptips = require('../../zanui-weapp/dist/toptips/index');
-Page(Object.assign({}, Toptips, {
+var Zan = require('../../zanui-weapp/dist/index');
+Page(Object.assign({}, Toptips,Zan.Field, {
 
     /**
      * 页面的初始数据
      */
     data: {
+        name: '',
+        wechatNumber: '',
+        age: '',
+        height: '',
+        weight: '',
+        signature:'',
         region: ['山东省', '烟台市', '芝罘区'],
         tempFilePaths: [],
         imageCountMax: 4
@@ -37,9 +44,6 @@ Page(Object.assign({}, Toptips, {
                     let now = this.data.imageCountMax - this.data.tempFilePaths.length
                     this.showZanTopTips('您只能选择' + now + '张图片');
                 }
-
-                console.log(this.data.tempFilePaths)
-                // var tempFilePaths = res.tempFilePaths
             }
         })
     },
@@ -51,24 +55,43 @@ Page(Object.assign({}, Toptips, {
         })
     },
 
-    longPress:function(e){
+    longPress: function(e) {
         let index = e.target.dataset.index
         let currentIndex = parseInt(index) + 1
         wx.showModal({
-            title:'删除',
-            content:'确定删除第张'+currentIndex+'照片吗',
-            success: res =>{
+            title: '删除',
+            content: '确定删除第张' + currentIndex + '照片吗',
+            success: res => {
                 if (res.confirm) {
-                    let tempFilePaths = this.data.tempFilePaths
-                    tempFilePaths.splice(index,1)
+                    this.data.tempFilePaths.splice(index, 1)
                     this.setData({
-                        tempFilePaths:tempFilePaths
+                        tempFilePaths: this.data.tempFilePaths
                     })
-                }else if (res.cancel) {
+                } else if (res.cancel) {
 
                 }
             }
         })
+    },
+
+    handleZanFieldChange(e) {
+        const { componentId, detail } = e;
+        var param = {};
+        param[componentId] = detail.value
+        this.setData(param);
+        // console.log('[zan:field:change]', componentId, detail);
+        // console.log(this.data.name)
+        // console.log(this.data.wechatNumber)
+        // console.log(this.data.age)
+        // console.log(this.data.height)
+        // console.log(this.data.weight)
+        // console.log(this.data.signature)
+    },
+
+    onAreaChange(e) {
+      this.setData({
+        signature: e.detail.value
+      });
     },
     /**
      * 生命周期函数--监听页面加载

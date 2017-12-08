@@ -3,7 +3,7 @@ module.exports = {
     const { componentId } = event.currentTarget.dataset;
     event.componentId = componentId;
 
-    console.info('[zan:field:change]', event);
+    // console.info('[zan:field:change]', event);
 
     if (this.handleZanFieldChange) {
       return this.handleZanFieldChange(event);
