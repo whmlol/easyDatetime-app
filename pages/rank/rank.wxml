@@ -1,0 +1,49 @@
+<view class="photo_wall">
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">热度榜</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">男神榜</view>
+        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">女神榜</view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{[0,1,2]}}">
+            <scroll-view scroll-y="true" class="scoll-h">
+                <view class="photo_wall_view">
+                    <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
+                        <view class="zan-card" style="background: #fff;margin-top: 10px;">
+                          <!-- 卡片左侧商品图片 -->
+                          <view class="zan-card__thumb">
+                            <image class="zan-card__img"
+                              src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg"
+                              mode="aspectFit"
+                            ></image>
+                          </view>
+                          <!-- 卡片右侧详情描述 -->
+                          <view class="zan-card__detail">
+                            <!-- 商品标题行 -->
+                            <!-- 每行可以使用 zan-card__detail-row 来控制展示区域 -->
+                            <!-- 每行里面可以用 zan-card__left-col zan-card__right-col 来控制左右展示 -->
+                            <view class="zan-card__detail-row">
+                              <view class="zan-card__right-col">¥ 999.99</view>
+                              <view class="zan-card__left-col zan-ellipsis--l2">
+                                 红烧牛肉【虚拟商品】【有库存】【有sku】
+                              </view>
+                            </view>
+                            <!-- 商品附属信息展示行 -->
+                            <view class="zan-card__detail-row zan-c-gray-darker">
+                              <view class="zan-card__right-col">x2</view>
+                              <view class="zan-card__left-col">
+                                3000克 50%
+                              </view>
+                            </view>
+                            <!-- 商品操作按钮相关 -->
+                            <view class="zan-card__detail-row zan-c-gray-darker">
+                              <view class="zan-card__left-col zan-c-red">已发货</view>
+                            </view>
+                          </view>
+                        </view>
+                    </block>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

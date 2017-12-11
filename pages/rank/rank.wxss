@@ -1,1 +1,95 @@
-/* pages/rank/rank.wxss */
+/**index.wxss**/
+page{
+	/*border-top: 1px solid #1196db;*/
+	background: #ebebeb;
+}
+.photo_wall {
+	/*display : block;
+	height  : 100%;
+	width   : 100%;
+	overflow: hidden;*/
+}
+.photo_wall_view {
+	display: flex;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-left: 2%;
+	margin-right: 2%;
+}
+.photo_wall_view_item {
+	margin-top: 2%;
+	width: 49%;
+	height: 500rpx;
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 35px;
+}
+.navigator{
+	width: 100%;
+	height:100%;
+}
+.image_view {
+	width: 100%;
+	height: 70%;
+}
+.image {
+	height: 100%;
+	width:100%;
+}
+.text_view {
+	width: 100%;
+	height: 30%;
+	background-color: #ebebeb;
+	display: flex;
+	flex-direction: column;
+
+}
+.text_name {
+	/*height: 100%;*/
+	/*width: 50px;*/
+}
+.text_age {
+	/*height: 100rpx;*/
+
+}
+.tab-h {
+    height: 80rpx;
+    width: 100%; 
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 80rpx;
+    background: #F7F7F7; 
+    font-size: 16px; 
+    white-space: nowrap;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 99;
+}
+.tab-item {
+	margin:0 36rpx;
+	display: inline-block;
+}
+.tab-item.active {
+	color: #4675F9;
+	position: relative;
+}
+.tab-item.active:after { 
+	content: "";
+	display: block;
+	height: 8rpx;
+	width: 52rpx;
+	background: #4675F9;
+	position: absolute; 
+	bottom: 0;
+	left: 5rpx;
+	border-radius: 16rpx;
+}
+.tab-content {
+	margin-top: 80rpx;
+}
+.scoll-h {
+	height: 100%;
+	width: 100%;
+}
