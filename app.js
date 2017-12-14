@@ -15,10 +15,14 @@
                                   method: 'post',
                                   data: {
                                       'code': res.code,
-                                      'nick_name': this.globalData.userInfo.nickName
+                                      'nick_name': this.globalData.userInfo.nickName,
+                                      'icon':this.globalData.userInfo.avatarUrl,
+                                      'province':this.globalData.userInfo.province,
+                                      'city':this.globalData.userInfo.city
                                   },
                                   success: res => {
-                                      this.globalData.sessionId = res.data.ssid
+                                      this.globalData.access_token = res.data.data.access_token
+                                      this.globalData.userId = res.data.data.userId
                                   }
 
                               })
@@ -38,7 +42,8 @@
       },
       globalData: {
           userInfo: null,
-          sessionId: '',
+          access_token: '',
+          userId:'',
           host: 'http://127.0.0.1:8000',
       }
   })
