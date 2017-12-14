@@ -9,38 +9,26 @@
             <scroll-view scroll-y="true" class="scoll-h">
                 <view class="photo_wall_view">
                     <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
-                        <view class="zan-card" style="background: #fff;margin-top: 10px;">
-                          <!-- 卡片左侧商品图片 -->
-                          <view class="zan-card__thumb">
-                            <image class="zan-card__img"
-                              src="https://img.yzcdn.cn/upload_files/2016/11/25/FpqPXlrMRjKwJs8VdTu3ZDJCj4j5.jpeg?imageView2/2/w/200/h/200/q/90/format/jpeg"
-                              mode="aspectFit"
-                            ></image>
-                          </view>
-                          <!-- 卡片右侧详情描述 -->
-                          <view class="zan-card__detail">
-                            <!-- 商品标题行 -->
-                            <!-- 每行可以使用 zan-card__detail-row 来控制展示区域 -->
-                            <!-- 每行里面可以用 zan-card__left-col zan-card__right-col 来控制左右展示 -->
-                            <view class="zan-card__detail-row">
-                              <view class="zan-card__right-col">¥ 999.99</view>
-                              <view class="zan-card__left-col zan-ellipsis--l2">
-                                 红烧牛肉【虚拟商品】【有库存】【有sku】
-                              </view>
+                        <navigator url="/pages/details/details" class="zan-card card" hover-class="naviga_background">
+                            <view class="zan-card__thumb">
+                                <image class="zan-card__img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg" mode="aspectFill"></image>
                             </view>
-                            <!-- 商品附属信息展示行 -->
-                            <view class="zan-card__detail-row zan-c-gray-darker">
-                              <view class="zan-card__right-col">x2</view>
-                              <view class="zan-card__left-col">
-                                3000克 50%
-                              </view>
+                            <view class="zan-card__detail">
+                                <view wx:if="{{index == 0||index == 1||index == 2}}" class="zan-card__right-col">
+                                    <image wx:if="{{index == 0}}" src="/images/Medal1.png" class="image"></image>
+                                    <image wx:elif="{{index == 1}}" src="/images/Medal2.png" class="image"></image>
+                                    <image wx:elif="{{index == 2}}" src="/images/Medal3.png" class="image"></image>
+                                </view>
+                                <view wx:else class="card_right_index">
+                                    <view class="zan-c-red zan-font-bold index">{{index+1}}</view>
+                                </view>
+                                <view class="zan-card__left-col">
+                                    <view>[nishishei]</view>
+                                    <view class="detail_text">年龄：30</view>
+                                    <view class="zan-c-red zan-icon zan-icon-like jz_done_text detail_text">100</view>
+                                </view>
                             </view>
-                            <!-- 商品操作按钮相关 -->
-                            <view class="zan-card__detail-row zan-c-gray-darker">
-                              <view class="zan-card__left-col zan-c-red">已发货</view>
-                            </view>
-                          </view>
-                        </view>
+                        </navigator>
                     </block>
                 </view>
             </scroll-view>

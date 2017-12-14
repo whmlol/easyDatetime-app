@@ -1,0 +1,19 @@
+<import src="../../zanui-weapp/dist/switch/index.wxml" />
+<view class="zan-panel">
+    <view class="zan-cell">
+      <view class="zan-cell__bd">多行列表</view>
+    <template is="zan-switch" data="{{ componentId: 'sync' }}" />
+    </view>
+    <view class="zan-cell">
+      <view class="zan-cell__bd">多行列表</view>
+        <template is="zan-switch" data="{{ componentId: 'sync' }}" />
+    </view>
+    <view class="zan-cell">
+      <view class="zan-cell__bd">多行列表</view>
+        <!-- <view class="weui-cell weui-cell_switch"> -->
+            <!-- <view class="weui-cell__ft"> -->
+                <switch checked />
+            <!-- </view> -->
+        <!-- </view> -->
+    </view>
+  </view>

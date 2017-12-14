@@ -59,7 +59,7 @@ page{
     box-sizing: border-box;
     overflow: hidden;
     line-height: 80rpx;
-    background: #F7F7F7; 
+    background: #fff; 
     font-size: 16px; 
     white-space: nowrap;
     position: fixed;
@@ -72,15 +72,15 @@ page{
 	display: inline-block;
 }
 .tab-item.active {
-	color: #4675F9;
+	color: #1196db;
 	position: relative;
 }
 .tab-item.active:after { 
 	content: "";
 	display: block;
 	height: 8rpx;
-	width: 52rpx;
-	background: #4675F9;
+	width: 80rpx;
+	background: #1196db;
 	position: absolute; 
 	bottom: 0;
 	left: 5rpx;
@@ -92,4 +92,23 @@ page{
 .scoll-h {
 	height: 100%;
 	width: 100%;
+}
+.card_right_index {
+	float:right;
+	line-height: 90px;
+}
+.index {
+	font-size:32px;
+	margin-right: 12px;
+}
+.detail_text {
+	margin-top: 12px;
+}
+.image {
+	height:50px;
+	width:50px;
+}
+.card {
+	background: #fff;
+	margin-top: 10px;
 }

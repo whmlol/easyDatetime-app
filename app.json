@@ -1,43 +1,44 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/user/user",
-        "pages/logs/logs",
-        "pages/rank/rank",
-        "pages/details/details",
-        "pages/sell/sell"
-    ],
-    "window":
-    {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#1196db",
-        "navigationBarTitleText": "卖朋友",
-        "navigationBarTextStyle": "white",
-        "backgroundColor": "#ebebeb"
-    },
-    "tabBar":
-    {
-        "color": "#515151",
-        "selectedColor": "#1196db",
-        "borderStyle": "white",
-        "list": [
-        {
-            "pagePath": "pages/index/index",
-            "text": "首页",
-            "iconPath": "/images/index.png",
-            "selectedIconPath": "/images/index_blue.png"
-        },
-        {
-            "pagePath": "pages/rank/rank",
-            "text": "榜单",
-            "iconPath": "/images/order.png",
-            "selectedIconPath": "/images/order_blue.png"
-        },
-        {
-            "pagePath": "pages/user/user",
-            "text": "我的",
-            "iconPath": "/images/my.png",
-            "selectedIconPath": "/images/user_blue.png"
-        }]
-    }
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/logs/logs",
+    "pages/rank/rank",
+    "pages/details/details",
+    "pages/sell/sell",
+    "pages/profile/profile",
+    "pages/setting/setting"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1196db",
+    "navigationBarTitleText": "卖朋友",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ebebeb"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#1196db",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/index.png",
+        "selectedIconPath": "/images/index_blue.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "榜单",
+        "iconPath": "/images/order.png",
+        "selectedIconPath": "/images/order_blue.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/my.png",
+        "selectedIconPath": "/images/user_blue.png"
+      }
+    ]
+  }
 }

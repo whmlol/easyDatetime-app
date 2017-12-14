@@ -2,36 +2,34 @@
     <image wx:if="{{ avatar }}" src="{{ avatar }}"></image>
     <view class="user_name">{{ name }}</view>
 </view>
-<navigator url="/pages/launch/launch" hover-class="none">
-    <view class="zan-panel">
-        <view class="zan-cell zan-cell--access">
-        <view class="zan-icon zan-icon-description" style="color: #1196db;margin-right:10px;"></view>
-            <view class="zan-cell__bd">个人信息</view>
-            <view class="zan-cell__ft">详细信息</view>
-        </view>
-    </view>
-</navigator>
 <view class="zan-panel">
-    <navigator url="/pages/launch/launch" hover-class="background: #ebebeb;" class="zan-cell zan-cell--access">
+    <navigator url="/pages/profile/profile" hover-class="naviga_background" class="zan-cell zan-cell--access">
+        <view class="zan-icon zan-icon-description" style="color: #1196db;margin-right:10px;"></view>
+        <view class="zan-cell__bd">个人信息</view>
+        <view class="zan-cell__ft">详细信息</view>
+    </navigator>
+</view>
+<view class="zan-panel">
+    <navigator url="/pages/sell/sell" hover-class="naviga_background" class="zan-cell zan-cell--access">
         <view class="zan-icon zan-icon-send-gift" style="color: #1196db;margin-right:10px;"></view>
         <view class="zan-cell__bd">果断卖</view>
         <view class="zan-cell__ft"></view>
     </navigator>
-    <navigator url="/pages/join/join" hover-class="none" class="zan-cell zan-cell--access">
+    <navigator url="/pages/join/join" hover-class="naviga_background" class="zan-cell zan-cell--access">
         <view class="zan-icon zan-icon-shop-collect" style="color: #1196db;margin-right:10px;"></view>
         <view class="zan-cell__bd">我卖出的</view>
         <view class="zan-cell__ft"></view>
     </navigator>
-    <navigator url="/pages/join/join" hover-class="none" class="zan-cell zan-cell--access">
+    <navigator url="/pages/join/join" hover-class="naviga_background" class="zan-cell zan-cell--access">
         <view class="zan-icon zan-icon-goods-collect" style="color: #1196db;margin-right:10px;"></view>
         <view class="zan-cell__bd">多行列表</view>
         <view class="zan-cell__ft"></view>
     </navigator>
 </view>
-<view class="zan-panel" bindtap="setting">
-    <view class="zan-cell zan-cell--access">
-        <view class="zan-icon zan-icon-setting" style="color: #1196db;margin-right:10px;"></view>
-        <view class="zan-cell__bd">设置</view>
-        <view class="zan-cell__ft"></view>
-    </view>
+<view class="zan-panel">
+    <navigator url="/pages/setting/setting" hover-class="naviga_background" class="zan-cell zan-cell--access">
+            <view class="zan-icon zan-icon-setting" style="color: #1196db;margin-right:10px;"></view>
+            <view class="zan-cell__bd">设置</view>
+            <view class="zan-cell__ft"></view>
+    </navigator>
 </view>
