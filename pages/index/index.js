@@ -55,13 +55,13 @@ Page({
         var that = this;
         //  高度自适应
         wx.getSystemInfo({
-            success: function(res) {
+            success: res => {
                 var clientHeight = res.windowHeight,
                     clientWidth = res.windowWidth,
                     rpxR = 750 / clientWidth;
                 var calc = clientHeight * rpxR - 80;
                 console.log(calc)
-                that.setData({
+                this.setData({
                     winHeight: calc
                 });
             }
