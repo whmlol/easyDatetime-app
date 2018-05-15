@@ -8,15 +8,15 @@
         <swiper-item wx:for="{{[0,1,2]}}">
             <scroll-view scroll-y="true" class="scoll-h">
                 <view class="photo_wall_view">
-                    <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
+                    <block wx:for="{{ expertList }}" wx:key="{{ item.id }}">
                         <view class="photo_wall_view_item">
                             <navigator url="/pages/details/details?id={{ item.id }}" class="navigator" hover-class="naviga_background">
                                 <view class="image_view">
                                     <image class="image" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg"></image>
                                 </view>
                                 <view class="text_view">
-                                    <text class="text_name">nishishei</text>
-                                    <text class="text_age">24|180cm</text>
+                                    <text class="text_name">{{ item.name }}</text>
+                                    <text class="text_age">{{ item.age }}|{{ item.height }}</text>
                                 </view>
                             </navigator>
                         </view>

@@ -45,13 +45,11 @@ page{
 	flex-direction: column;
 
 }
-.text_name {
-	/*height: 100%;*/
-	/*width: 50px;*/
+.text_view .text_name {
+	margin-left: 10rpx;
 }
-.text_age {
-	/*height: 100rpx;*/
-
+.text_view .text_age {
+	margin-left: 10rpx;
 }
 .tab-h {
     height: 80rpx;

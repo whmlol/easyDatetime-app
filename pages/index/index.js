@@ -11,18 +11,64 @@ Page({
         winHeight: "", //窗口高度
         currentTab: 0, //预设当前项的值
         scrollLeft: 0, //tab标题的滚动条位置
-        expertList: [{ //假数据
-            img: "avatar.png",
-            name: "欢顔",
-            tag: "知名情感博主",
-            answer: 134,
-            listen: 2234
-        }]
+        expertList: [
+            { //假数据
+                id:1,
+                img: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg",
+                name: "欢顔",
+                tag: "知名情感博主",
+                age: 24,
+                height: 180
+            },{ //假数据
+                id:1,
+                img: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg",
+                name: "欢顔",
+                tag: "知名情感博主",
+                age: 24,
+                height: 180
+            },{ //假数据
+                id:1,
+                img: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg",
+                name: "欢顔",
+                tag: "知名情感博主",
+                age: 24,
+                height: 180
+            },{ //假数据
+                id:1,
+                img: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg",
+                name: "欢顔",
+                tag: "知名情感博主",
+                age: 24,
+                height: 180
+            },{ //假数据
+                id:1,
+                img: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg",
+                name: "欢顔",
+                tag: "知名情感博主",
+                age: 24,
+                height: 180
+            }     
+        ]
     },
     //滚动切换标签样式
     switchTab: function(e) {
         this.setData({
-            currentTab: e.detail.current
+            currentTab: e.detail.current,
+            expertList:[{ //假数据
+                id:1,
+                img: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg",
+                name: "欢顔",
+                tag: "知名情感博主",
+                age: 24,
+                height: 180
+            },{ //假数据
+                id:1,
+                img: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509684760991&di=f705b1a64a241a385430530855cef1f3&imgtype=0&src=http%3A%2F%2Ftvax2.sinaimg.cn%2Fcrop.0.0.1242.1242.1024%2Fb34eacb7ly8fhepiyrzp4j20yi0yidis.jpg",
+                name: "欢顔",
+                tag: "知名情感博主",
+                age: 24,
+                height: 180
+            }]    
         });
         this.checkCor();
     },
@@ -31,7 +77,7 @@ Page({
         var cur = e.target.dataset.current;
         if (this.data.currentTaB == cur) { return false; } else {
             this.setData({
-                currentTab: cur
+                currentTab: cur,
             })
         }
     },
